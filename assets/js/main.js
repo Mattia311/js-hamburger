@@ -1,9 +1,16 @@
 // mostrare/ nascondere il menù principale
-const menuVisi = document.getElementsByClassName('.hamburger-menu');
+const menuVisi = document.querySelector('.hamburger-menu');
 
 
-
-const visibile = document.getElementsByClassName('.fas fa-bars');
+// mostrare il menu
+const visibile = document.querySelector('.header-right i');
 visibile.addEventListener('click', function(){
-    menuVisi.style.display = 'block'
-})
+    menuVisi.classList.add('active')
+});
+
+
+// nascondere il menu
+const invisible = document.querySelector('.close i');
+invisible.addEventListener('click', function(){
+    menuVisi.classList.remove('active')
+});
